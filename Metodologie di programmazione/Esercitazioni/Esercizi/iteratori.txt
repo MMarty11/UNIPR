@@ -1,0 +1,45 @@
+/* Iteratori
+
+** Categorie di iteratori
+
+1) random access iterator
+
+std::vector, std::deque, std::string, array
+
+++i, i++, --i, i--
+i + n, i - n, i += n, i -= n,
+i - j
+
+==, !=,
+<, <= , >, >=
+
+*i, i[n]
+
+2) bidirectional iterator
+
+std::list
+
+++i, i++, --i, i--
+==, !=,
+*i
+
+3) forward iterator
+
+std::forward_list
+
+++i, i++
+==, !=,
+*i
+
+4) input iterator
+
+++i, i++
+==, !=,
+*i (solo lettura)
+
+*) output iterator
+
+++i, i++
+*i (solo scrittura)
+
+*/
