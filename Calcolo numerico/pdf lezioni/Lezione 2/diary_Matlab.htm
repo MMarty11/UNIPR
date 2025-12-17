@@ -1,0 +1,214 @@
+clear
+clc
+pippo=3*pi
+
+pippo =
+
+     9.424777960769379e+00
+
+pluto=pi;
+clear pluto
+i
+
+ans =
+
+      0.000000000000000e+00 + 1.000000000000000e+00i
+
+j
+
+ans =
+
+      0.000000000000000e+00 + 1.000000000000000e+00i
+
+help eps
+ <strong>eps</strong>  Spacing of floating point numbers.
+    D = <strong>eps</strong>(X), is the positive distance from ABS(X) to the next larger in
+    magnitude floating point number of the same precision as X.
+    X may be either double precision or single precision.
+    For all X, <strong>eps</strong>(X) is equal to <strong>eps</strong>(ABS(X)).
+ 
+    <strong>eps</strong>, with no arguments, is the distance from 1.0 to the next larger double
+    precision number, that is <strong>eps</strong> with no arguments returns 2^(-52).
+ 
+    <strong>eps</strong>('double') is the same as <strong>eps</strong>, or <strong>eps</strong>(1.0).
+    <strong>eps</strong>('single') is the same as <strong>eps</strong>(single(1.0)), or single(2^-23).
+ 
+    Except for numbers whose absolute value is smaller than REALMIN,
+    if 2^E <= ABS(X) < 2^(E+1), then
+       <strong>eps</strong>(X) returns 2^(E-23) if ISA(X,'single')
+       <strong>eps</strong>(X) returns 2^(E-52) if ISA(X,'double')
+ 
+    For all X of class double such that ABS(X) <= REALMIN, <strong>eps</strong>(X)
+    returns 2^(-1074).   Similarly, for all X of class single such that
+    ABS(X) <= REALMIN('single'), <strong>eps</strong>(X) returns 2^(-149).
+ 
+    Replace expressions of the form
+       if Y < <strong>eps</strong> * ABS(X)
+    with
+       if Y < <strong>eps</strong>(X)
+ 
+    Example return values from calling <strong>eps</strong> with various inputs are
+    presented in the table below:
+ 
+          Expression                   Return Value
+         ===========================================
+          eps(1/2)                     2^(-53)
+          eps(1)                       2^(-52)
+          eps(2)                       2^(-51)
+          eps(realmax)                 2^971
+          eps(0)                       2^(-1074)
+          eps(realmin/2)               2^(-1074)
+          eps(realmin/16)              2^(-1074)
+          eps(Inf)                     NaN
+          eps(NaN)                     NaN
+         -------------------------------------------
+          eps(single(1/2))             2^(-24)
+          eps(single(1))               2^(-23)
+          eps(single(2))               2^(-22)
+          eps(realmax('single'))       2^104
+          eps(single(0))               2^(-149)
+          eps(realmin('single')/2)    2^(-149)
+          eps(realmin('single')/16)   2^(-149)
+          eps(single(Inf))             single(NaN)
+          eps(single(NaN))             single(NaN)
+ 
+    See also <a href="matlab:help realmax">realmax</a>, <a href="matlab:help realmin">realmin</a>.
+
+    <a href="matlab:doc eps">Reference page for eps</a>
+
+eps
+
+ans =
+
+     2.220446049250313e-16
+
+2^(-52)
+
+ans =
+
+     2.220446049250313e-16
+
+sqrt(2)
+
+ans =
+
+     1.414213562373095e+00
+
+ans^2
+
+ans =
+
+     2.000000000000000e+00
+
+ans-2
+
+ans =
+
+     4.440892098500626e-16
+
+help NaN
+--- <strong>NaN</strong> not found. Showing help for <strong>nan</strong> instead. ---
+
+ NaN    Not-a-Number.
+    NaN is the IEEE arithmetic representation for Not-a-Number.
+    A NaN is obtained as a result of mathematically undefined
+    operations like 0.0/0.0  and inf-inf.
+ 
+    NaN('double') is the same as NaN with no inputs.
+ 
+    NaN('single') is the single precision representation of NaN.
+ 
+    NaN(N) is an N-by-N matrix of NaNs.
+ 
+    NaN(M,N) or NaN([M,N]) is an M-by-N matrix of NaNs.
+ 
+    NaN(M,N,P,...) or NaN([M,N,P,...]) is an M-by-N-by-P-by-... array of NaNs.
+ 
+    NaN(..., CLASSNAME) is an array of NaNs of class specified by the 
+    string CLASSNAME. CLASSNAME can be either 'single' or 'double'.
+ 
+    NaN(..., 'like', Y) is an array of NaNs with the same data type, sparsity,
+    and complexity (real or complex) as the single or double precision numeric 
+    variable Y.
+ 
+    Note: The size inputs M, N, and P... should be nonnegative integers. 
+    Negative integers are treated as 0.
+ 
+    See also <a href="matlab:help inf">inf</a>, <a href="matlab:help isnan">isnan</a>, <a href="matlab:help isfinite">isfinite</a>, <a href="matlab:help isfloat">isfloat</a>.
+
+    <a href="matlab:doc nan">Reference page for nan</a>
+
+help inf
+ <strong>inf</strong> Infinity.       
+    <strong>inf</strong> returns the IEEE arithmetic representation for positive
+    infinity.  Infinity is also produced by operations like dividing by
+    zero, eg. 1.0/0.0, or from overflow, eg. exp(1000).
+ 
+    <strong>inf</strong>('double') is the same as <strong>inf</strong> with no inputs.
+ 
+    <strong>inf</strong>('single') is the single precision representation of <strong>inf</strong>.
+ 
+    <strong>inf</strong>(N) is an N-by-N matrix of INFs.
+ 
+    <strong>inf</strong>(M,N) or <strong>inf</strong>([M,N]) is an M-by-N matrix of INFs.
+ 
+    <strong>inf</strong>(M,N,P,...) or <strong>inf</strong>([M,N,P,...]) is an M-by-N-by-P-by-... array of INFs.
+ 
+    <strong>inf</strong>(..., CLASSNAME) is an array of INFs of class specified by the 
+    string CLASSNAME. CLASSNAME can be either 'single' or 'double'.
+ 
+    <strong>inf</strong>(..., 'like', Y) is an array of INFs with the same data type, sparsity,
+    and complexity (real or complex) as the single or double precision numeric 
+    variable Y.
+ 
+    Note: The size inputs M, N, and P... should be nonnegative integers. 
+    Negative integers are treated as 0.
+ 
+    See also <a href="matlab:help nan">nan</a>, <a href="matlab:help isinf">isinf</a>, <a href="matlab:help isfinite">isfinite</a>, <a href="matlab:help isfloat">isfloat</a>.
+
+    <a href="matlab:doc inf">Reference page for inf</a>
+
+1/0
+
+ans =
+
+   Inf
+
+exp(1000)
+
+ans =
+
+   Inf
+
+help realmax
+ <strong>realmax</strong> Largest finite floating point number.
+    <strong>realmax</strong> returns the largest finite floating point number in IEEE double
+    precision.
+ 
+    <strong>realmax</strong>('double') is the same as <strong>realmax</strong>.
+ 
+    <strong>realmax</strong>('single') returns the largest finite floating point number in
+    IEEE single precision.
+ 
+    See also <a href="matlab:help eps">eps</a>, <a href="matlab:help realmin">realmin</a>, <a href="matlab:help intmax">intmax</a>.
+
+    <a href="matlab:doc realmax">Reference page for realmax</a>
+
+realmax
+
+ans =
+
+    1.797693134862316e+308
+
+realmax+1
+
+ans =
+
+    1.797693134862316e+308
+
+ans-realmax
+
+ans =
+
+     0
+

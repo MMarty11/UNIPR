@@ -1,0 +1,78 @@
+x=linspace(-pi,pi);
+y=cos(x);
+plot(x,y)
+grid on
+help axis
+ <strong>axis</strong>  Control axis scaling and appearance.
+    <strong>axis</strong>([XMIN XMAX YMIN YMAX]) sets scaling for the x- and y-axes
+       on the current plot.
+    <strong>axis</strong>([XMIN XMAX YMIN YMAX ZMIN ZMAX]) sets the scaling for the
+       x-, y- and z-axes on the current 3-D plot.
+    <strong>axis</strong>([XMIN XMAX YMIN YMAX ZMIN ZMAX CMIN CMAX]) sets the
+       scaling for the x-, y-, z-axes and color scaling limits on
+       the current axis (see CAXIS). 
+    V = <strong>axis</strong> returns a row vector containing the scaling for the
+       current plot.  If the current view is 2-D, V has four
+       components; if it is 3-D, V has six components.
+ 
+    <strong>axis</strong> AUTO  returns the axis scaling to its default, automatic
+       mode where, for each dimension, 'nice' limits are chosen based
+       on the extents of all line, surface, patch, and image children.
+    <strong>axis</strong> MANUAL  freezes the scaling at the current limits, so that if
+       HOLD is turned on, subsequent plots will use the same limits.
+    <strong>axis</strong> TIGHT  sets the axis limits to the range of the data.
+    <strong>axis</strong> FILL  sets the axis limits and PlotBoxAspectRatio so that
+       the axis fills the position rectangle.  This option only has
+       an effect if PlotBoxAspectRatioMode or DataAspectRatioMode are
+       manual.
+ 
+    <strong>axis</strong> IJ  puts MATLAB into its "matrix" axes mode.  The coordinate
+       system origin is at the upper left corner.  The i axis is
+       vertical and is numbered from top to bottom.  The j axis is
+       horizontal and is numbered from left to right.
+    <strong>axis</strong> XY  puts MATLAB into its default "Cartesian" axes mode.  The
+       coordinate system origin is at the lower left corner.  The x
+       axis is horizontal and is numbered from left to right.  The y
+       axis is vertical and is numbered from bottom to top.
+ 
+    <strong>axis</strong> EQUAL  sets the aspect ratio so that equal tick mark
+       increments on the x-,y- and z-axis are equal in size. This
+       makes SPHERE(25) look like a sphere, instead of an ellipsoid.
+    <strong>axis</strong> IMAGE  is the same as <strong>axis</strong> EQUAL except that the plot
+       box fits tightly around the data.
+    <strong>axis</strong> SQUARE  makes the current axis box square in size.
+    <strong>axis</strong> NORMAL  restores the current axis box to full size and
+        removes any restrictions on the scaling of the units.
+        This undoes the effects of <strong>axis</strong> SQUARE and <strong>axis</strong> EQUAL.
+    <strong>axis</strong> VIS3D  freezes aspect ratio properties to enable rotation of
+        3-D objects and overrides stretch-to-fill.
+ 
+    <strong>axis</strong> OFF  turns off all axis labeling, tick marks and background.
+    <strong>axis</strong> ON  turns axis labeling, tick marks and background back on.
+ 
+    <strong>axis</strong>(H,...) changes the axes handles listed in vector H.
+ 
+    See also <a href="matlab:help axes">axes</a>, <a href="matlab:help grid">grid</a>, <a href="matlab:help subplot">subplot</a>, <a href="matlab:help xlim">xlim</a>, <a href="matlab:help ylim">ylim</a>, <a href="matlab:help zlim">zlim</a>, <a href="matlab:help rlim">rlim</a>
+
+    <a href="matlab:doc axis">Reference page for axis</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('axis')">Other functions named axis</a>
+
+axis([-3.2 3.2 -1.5 1.5])
+axis square
+axis equal
+xlabel('angoli')
+ylabel('valore del seno')
+ylabel('valore del coseno')
+hold on
+plot(x,sin(x))
+legend('cos(x)','sin(x)')
+title('curve trigonometriche')
+plot(x,tan(x),'k--')
+axis auto
+figure
+help subplot
+ <strong>subplot</strong> Create axes in tiled positions.
+    H = <strong>subplot</strong>(m,n,p), or <strong>subplot</strong>(mnp), breaks the Figure window
+    into an m-by-n matrix of small axes, selects the p-th axes for
+    the current plot, and returns the axes handle.  The axes are
+    counted along the 
