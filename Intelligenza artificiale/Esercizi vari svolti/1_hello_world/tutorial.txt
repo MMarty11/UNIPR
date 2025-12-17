@@ -1,0 +1,9 @@
+Usa chdir('yourdir'). Per impostare il compilatore di SWI-Prolog
+nella giusta direzione. //?! 
+
+Con working_directory(CWD, CWD). possiamo vedere quale è la working directory 
+corrente. Funziona come working_directory(-Old, +New).
+
+Per caricare un programma usiamo [nome_programma].
+Per girare il programma caricato usiamo main. (se c'è la definizione).
+
